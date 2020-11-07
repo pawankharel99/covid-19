@@ -1,7 +1,7 @@
 body{
     color: #333333;
     font-family: Arial;
-    max-width: 60px;
+    max-width: 560px;
     margin: 0 auto;
     padding: 0 16px;
 
@@ -49,4 +49,7 @@ button{
     background: #888888;
     color: white;
     padding: 8px;
+}
+.message2{
+    width: 300px;
 }

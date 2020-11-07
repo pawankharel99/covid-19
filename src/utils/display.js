@@ -12,12 +12,19 @@ request({url: url , json: true}, (error, response)=>{
        return callback('Data you are searching for is '+ data.message +'. Please check the Country name.', undefined)
     }else{
         const dataToday = data[today]
-        callback(undefined, 
-        // 'Reported Date:'+ dataToday.Date+
-  ' Total Confirmed Cases:'+ dataToday.Confirmed+
-  ' Total Deaths:' +dataToday.Deaths+
-  ' Total Recovered:' +dataToday.Recovered+
-  ' Active Cases:'+ dataToday.Active
+        // console.log(dataToday)
+        callback(undefined, {
+            date: dataToday.Date,
+            cases: dataToday.Confirmed,
+            deaths: dataToday.Deaths,
+            recovered: dataToday.Recovered,
+            active: dataToday.Active
+        }
+//         // 'Reported Date:'+ dataToday.Date+
+//   ' Total Confirmed Cases:'+ dataToday.Confirmed+
+//   ' Total Deaths:' +dataToday.Deaths+
+//   ' Total Recovered:' +dataToday.Recovered+
+//   ' Active Cases:'+ dataToday.Active
   )
     }
     

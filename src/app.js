@@ -4,7 +4,7 @@ const hbs = require('hbs')
 const forecast = require('./utils/display')
 
 const app = express()
-
+const port = process.env.PORT || 3000
 //path
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -22,9 +22,10 @@ hbs.registerPartials(partialsPath)
 app.get('', (req, res)=>{
     res.render('index',{
         title: 'Covid-19 Report',
-        name: 'pawan kharel',
+        name: 'pawan kharel'
     })
 })
+
 app.get('/country', (req, res)=>{
     if(!req.query.location){
         return res.send({
@@ -40,7 +41,6 @@ app.get('/country', (req, res)=>{
         }
         res.send({
             Forecast: forecastData
-            
         })
     })
 })
@@ -70,6 +70,6 @@ app.get('*', (req, res)=>{
         errorMessage: 'Page Not Found!!'
     })
 })
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('Server is up to port 3000')
 })

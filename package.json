@@ -1,6 +1,7 @@
 {
   "name": "covid-19",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
@@ -8,17 +9,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pawankharel99/node3-weather-website.git"
+    "url": "git+https://github.com/pawankharel99/covid-19.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pawankharel99/node3-weather-website/issues"
+    "url": "https://github.com/pawankharel99/covid-19/issues"
   },
-  "homepage": "https://github.com/pawankharel99/node3-weather-website#readme",
-  "description": ""
+  "homepage": "https://github.com/pawankharel99/covid-19#readme"
 }
